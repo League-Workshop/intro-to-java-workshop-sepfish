@@ -48,24 +48,46 @@ public class RobotTreasureHunt implements KeyEventDispatcher{
 	private void spaceBarWasPressed() {
 
 		// 5. Change ROBOTNAME below to match the name of the robot you created in step 1.  THEN, remove the slashes at the beginning of the next two lines
-		robotXLocation = meiko.getX();
-		robotYLocation = meiko.getY();
+		int robotXLocation = meiko.getX();
+		int robotYLocation = meiko.getY();
 		
 		// 6. Print the robotXLocation and robotYLocation variables to the console 
-		System.out.println("robotXLocation, robotYLocation");
+		System.out.println(robotXLocation);
+		System.out.println(robotYLocation);
 		
 		// 7. If robot is at same location as the little girl
 		//      --make a pop-up tell the robot where to go next
+		if (robotXLocation == 720 && robotYLocation == 440) {
 		JOptionPane.showMessageDialog(null, "Hey! I don't know where the treasure is, but I think the boy does!");
-		
+		}
 		// 8. Give the user subsequent clues at different locations on the image
-		// (pirate robot, swamp, parrots, etc.)
-		
+	//little boy
+		if (robotXLocation == 200 && robotYLocation == 420) {
+		JOptionPane.showMessageDialog(null, "Treasure? I think I saw something in the eye of the skull!");
+		}
+	//skull
+		if (robotXLocation == 210 && robotYLocation == 70) {
+		JOptionPane.showMessageDialog(null, "Ugh, doesn't it say to keep out? You want a clue, fine! I heard the parrots chattering about treasure.");
+	}
+	//parrots
+		if (robotXLocation == 620 && robotYLocation == 140) {
+			JOptionPane.showMessageDialog(null, "Treasure?? Hehe, we've hid it where you'll never find it! But maybe go ask the skull again! \nI'm sure he could help you SNIFF out some clues!");
+		}
+		if (robotXLocation == 180 && robotYLocation == 240) {
+			JOptionPane.showMessageDialog(null, "KEEP OUT!");
+		}
+		if (robotXLocation == 310 && robotYLocation == 210) {
+			JOptionPane.showMessageDialog(null, "KEEP OUT!");
+		}
+		if (robotXLocation == 830 && robotYLocation == 290) {
+			JOptionPane.showMessageDialog(null, "KEEP OUT!");
+		}
 		// 9.  If the robot is in the final location
 		//     --call the treasureFound() method
-		
+		if (robotXLocation == 250 && robotYLocation == 120) {
+			treasureFound();
+		}
 	}
-
 	private void go() {
 		KeyboardFocusManager.getCurrentKeyboardFocusManager().addKeyEventDispatcher(this);
 		Robot.setWindowImage("section4/treasure_hunt.jpg");
