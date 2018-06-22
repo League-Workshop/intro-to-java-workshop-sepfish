@@ -51,10 +51,19 @@ public class OwnAdventure {
 						JOptionPane.showMessageDialog(null, "Of course, you had to choose the most heavily-guarded path of the sewers. \nThe middle path was commonly used to sneak into the castle, so the king had stationed some guards there.");
 						JOptionPane.showMessageDialog(null, "They see you approaching, and unsheath their swords...");
 						JOptionPane.showMessageDialog(null, "You raise your dagger in response. You're a trained assassin. You can take them down.");
+					}
 				//PATH 1-1-2
 					if (sewerAlt == 0) {
 						JOptionPane.showMessageDialog(null, "You hurry down the right path. The ceiling slopes down farther and farther, and you become a little claustrophobic.");
 						JOptionPane.showMessageDialog(null, "Suddenly, the floor drops out from underneath you and you land in the murky water with a splash. \nDisgusting.");
+						JOptionPane.showMessageDialog(null, "You slowly swim through the murky sewage, trying not to think about what you're touching.");
+						JOptionPane.showMessageDialog(null, "The shouts of the guards fade as you head farther and farther away from them...");
+						JOptionPane.showMessageDialog(null, "You reach the end of the tunnel and find yourself at a gate. Peeking through it, you check for any guards and find none.");
+						JOptionPane.showMessageDialog(null, "You use your dagger to pry open the gate, finally climbing out of the disgusting sewer.");
+						JOptionPane.showMessageDialog(null, "The sewer had deposited you on a path you knew well - it took you straight out of the castle.");
+						JOptionPane.showMessageDialog(null, "You made it. You escaped.");
+						JOptionPane.showMessageDialog(null, "Now time for a bath.");
+						JOptionPane.showMessageDialog(null, "SUCCESS - END PATH 1-1-2");
 					}
 			
 			}
@@ -66,8 +75,8 @@ public class OwnAdventure {
 				JOptionPane.showMessageDialog(null, "The dagger cuts him down and you're able to run out the door and jam it behind you. \nThat'll buy you some time.");
 			}
 			
-			
 		}
+			
 		//PATH 2
 		if (weap1 == 2) {
 			JOptionPane.showMessageDialog(null, "You suppose... you can make it without a weapon.");
@@ -100,6 +109,19 @@ public class OwnAdventure {
 				if (sewerAlt == 0) {
 					JOptionPane.showMessageDialog(null, "You hurry down the right path. The ceiling slopes down farther and farther, and you become a little claustrophobic.");
 					JOptionPane.showMessageDialog(null, "Suddenly, the floor drops out from underneath you and you land in the murky water with a splash. \nDisgusting.");
+					JOptionPane.showMessageDialog(null, "You slowly swim through the murky sewage, trying not to think about what you're touching.");
+					JOptionPane.showMessageDialog(null, "The shouts of the guards fade as you head farther and farther away from them...");
+					JOptionPane.showMessageDialog(null, "You reach the end of the tunnel and find yourself at a gate. Peeking through it, you check for any guards and find none.");
+					JOptionPane.showMessageDialog(null, "You unsuccessfully try to pry the gate off and sigh. How are you going to get out now?");
+					JOptionPane.showConfirmDialog(null, "Will you go back?");
+					
+				//PATH 2-1-2-2
+					if (ans == 0) {
+						JOptionPane.showMessageDialog(null, "You decide not to go back and to keep brainstorming ways to escape.");
+					}
+					if (ans == 1) {
+						JOptionPane.showMessageDialog(null, "You decide to quietly head back through the murky water. Thankfully, you don't hear the guards as you climb back onto the path.");
+					}
 				}
 			
 			
@@ -119,4 +141,5 @@ public class OwnAdventure {
 		}
 	}
 
-}
+
+	}
